@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _util from '../_util.js';
 
-class SkillCard extends React.Component {
+class SkillCard extends Component {
     render() {
         return (
             <div className="card text-white bg-dark mb-3 col-lg-4" style={{ "margin": "0.5em" }}>
