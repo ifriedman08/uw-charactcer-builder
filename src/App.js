@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import charData from './charData.json';
-import StepZilla from 'react-stepzilla';
 import './App.css';
+import MainNav from './components/MainNav.js';
 import CareerStep from './components/CareerStep';
 import _util from './_util.js';
 
@@ -31,9 +31,10 @@ class App extends React.Component {
   render() {
       return (
           <div id="app">
-            <h3>Character Builder</h3>
-            <CareerStep charData={charData}/>
-            {/* <CareerAccordion careers={charData.careers}/> */}
+            <div>
+              <MainNav/>
+              <CareerStep charData={charData}/>
+            </div>
           </div>
       );
   }
