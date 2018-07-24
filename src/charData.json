@@ -546,43 +546,63 @@
   "origins": {
     "advanced": {
       "summary": "The Advanced grew up in prosperous, high tech societies, well ahead of the galactic technology curve, enjoying an unprecedented quality of life. Technologies and gadgets that would be rare or fantastical elsewhere were considered commonplace.",
-      "descriptions": ["angular", "robust", "strapping", "carefree", "lazy", "arrogant"]
+      "descriptions": ["angular", "robust", "strapping", "carefree", "lazy", "arrogant"],
+      "skillOptions": ["cutting edge", "artificial intelligence", "custom flyer", "surveillance"],
+      "iconName": "navigate"
     },
     "brutal": {
       "summary": "The Brutal were forged in the most volatile conditions; war zones, slavery or in barbaric, bloodthirsty societies. Life was short and cruel, blood and pain are the norm. There was no room for weakness or mercy, no place for honor or fair play.",
-      "descriptions": ["tired", "disfigured", "suppressed", "cruel", "angry", "severe"]
+      "descriptions": ["tired", "disfigured", "suppressed", "cruel", "angry", "severe"],
+      "skillOptions": ["branded", "assassination", "toughness", "sneak attack"],
+      "iconName": "flash"
     },
     "colonist": {
       "summary": "The Colonists are born and raised out on the fringes of galactic civilization, living in domes, colony pods or habitation modules, working diligently and tirelessly to terraform planets to make them more hospitable for the next generation.",
-      "descriptions": ["hard", "serious", "calloused", "dusky", "solid", "prudent"]
+      "descriptions": ["hard", "serious", "calloused", "dusky", "solid", "prudent"],
+      "skillOptions": ["resourceful", "tinker", "custom vehicle", "heavy lifting"],
+      "iconName": "home"
     },
     "crowded": {
       "summary": "The Crowded have lived their lives shoulder-to- shoulder with humanity. They come from the cramped confines of heavily-populated hive cities, underground facilities, domes and space stations. They are one face among billions.",
-      "descriptions": ["lively", "compact", "stout", "spare", "loud", "agoraphobic"]
+      "descriptions": ["lively", "compact", "stout", "spare", "loud", "agoraphobic"],
+      "skillOptions": ["affable", "contacts", "network", "bribe"],
+      "iconName": "people"
     },
     "galactic": {
       "summary": "The Galactics are born and raised in orbital stations, starships, and asteroid mining colonies. Most have lived their whole lives among the stars, surrounded and protected by machinery and electronics, breathing recycled air and eating hydroponic food.",
-      "descriptions": ["sharp", "guarded", "stoic", "isolated", "energetic", "graceful"]
+      "descriptions": ["sharp", "guarded", "stoic", "isolated", "energetic", "graceful"],
+      "skillOptions": ["fine tuning", "program", "weightlessness", "repair"],
+      "iconName": "planet"
     },
     "impoverished": {
       "summary": "The Impoverished grew up on the margins, in the slums, in slavery and prisons and filth. They have little to call their own, only what they could scrape and scrounge together. They've fought tooth and nail to survive against oppressive conditions.",
-      "descriptions": ["gaunt", "haggard", "sickly", "filthy", "vulgar", "fierce"]
+      "descriptions": ["gaunt", "haggard", "sickly", "filthy", "vulgar", "fierce"],
+      "skillOptions": ["scrappy", "stealth", "recklessness", "criminal"],
+      "iconName": "trending-down"
     },
     "privileged": {
       "summary": "The Privileged are the nobility of the galaxy, the elite. Their families hold great power and influence, be it financial, political or religious. Moving in such exalted circles, wielding their family name and power, they have grown up expecting courtesy and respect.",
-      "descriptions": ["manicured", "plump", "groomed", "snobbish", "sleek", "pompous"]
+      "descriptions": ["manicured", "plump", "groomed", "snobbish", "sleek", "pompous"],
+      "skillOptions": ["decorum", "luxury", "fame", "scapegoat"],
+      "iconName": "star"
     },
     "productive": {
       "summary": "The Productive live in societies, cultures or groups that place high importance on education and social responsibility. From a young age they begin training for their destined profession, devoting any spare time to higher education and secondary vocations.",
-      "descriptions": ["slight", "curious", "faded", "greying", "detached", "introverted"]
+      "descriptions": ["slight", "curious", "faded", "greying", "detached", "introverted"],
+      "skillOptions": ["vocation", "calibrations", "education", "acumen"],
+      "iconName": "construct"
     },
     "regimented": {
       "summary": "The Regimented have lived very strict lives. Whether in a militaristic society, a religious organisation or an authoritarian government, they have been indoctrinated to the advantages of discipline, obedience and loyalty.",
-      "descriptions": ["athletic", "meditative", "sturdy", "organised", "formal", "strict"]
+      "descriptions": ["athletic", "meditative", "sturdy", "organised", "formal", "strict"],
+      "skillOptions": ["discipline", "leadership", "tactics", "deduction"],
+      "iconName": "clipboard"
     },
     "rustic": {
       "summary": "The Rustic were raised on the very edges of galactic society, on the most inhospitable and savage worlds. With only basic machinery and tools, they were forced to toil by the sweat of their brow, shaping the hostile landscape.",
-      "descriptions": ["wrinkled", "creaking", "wiry", "aged", "weary", "strong"]
+      "descriptions": ["wrinkled", "creaking", "wiry", "aged", "weary", "strong"],
+      "skillOptions": ["hard labor", "construction", "survival", "chemistry"],
+      "iconName": "hammer"
     }
   },
   "assets": {
