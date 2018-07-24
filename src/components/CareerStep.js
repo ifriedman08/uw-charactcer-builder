@@ -13,16 +13,37 @@ class CareerAccordion extends React.Component {
     var accContent = careers.map((career, idx) =>{
         return (
           <div className="card" career={career} idx={idx} key={idx}>
-            <CareerAccordionHeader career={career} skills={this.props.skills} careers={this.props.careers} idx={idx}/>
-            <CareerAccordionPanel career={career} skills={this.props.skills} careers={this.props.careers}  idx={idx}/>
+            <CareerAccordionHeader 
+              idx={idx} 
+              career={career} 
+              skills={this.props.skills} 
+              careers={this.props.careers} 
+              toggleCareerState={this.props.toggleCareerState}
+              isActive={this.props.selectedCareers.includes(career)}
+              selectedSkills={this.props.selectedSkills}
+              />
+            <CareerAccordionPanel 
+              career={career} 
+              skills={this.props.skills} 
+              careers={this.props.careers}  
+              idx={idx} 
+              isActiveCareer={this.props.selectedCareers.includes(career)}
+              selectedSkills={this.props.selectedSkills}
+            />
           </div>
         )
       });
       return (
       <div style={{"paddingTop": "65px"}}>
-        <h3>Step 1: Select Careers</h3>
-        <p>Pick 2 careers from the options below by flipping the switches. The combination will determine your archetype, your skill choices, your methods and the way you approach challenges and opportunities. Your combined careers will give you access to a total of 10 skills. Choose any 3 of them. For example, I could pick Clandestine (Stealth) and Explorer (Recklessness and Survival)</p>
-        <div id="accordion" style={{"margin": "0.3em"}}>
+        <h3 name="career-header">Step 1: Select Careers</h3>
+          <p>Pick 2 <strong>careers</strong> from the options below by flipping the switches. 
+            These careers are basically classes from D&D. 
+            The combination will determine your archetype, your skill choices, 
+            your methods and the way you approach challenges and opportunities in the game. 
+            Each career gives you 5 skill options for a <strong>total of 10</strong>. 
+            Choose <strong>any 3 skills</strong> fromamong those 10. 
+            For example: Clandestine (Stealth) and Explorer (Recklessness and Survival)</p>
+        <div id="career-accordion" style={{"margin": "0.3em"}}>
           {accContent}
         </div>
       </div>
@@ -33,25 +54,20 @@ class CareerAccordion extends React.Component {
 class CareerToggleSwitch extends Component {
   constructor(props) {
     super(props);
-  }
+  };
 
-  handleClick(params) {
-    event.preventDefault();
-    console.log();
-  }
+  handleClick(params) {};
 
   render() {
+    var career = this.props.career;
     return (
-      <div>
-        <span className="switch switch-lg float-right">
-          <input type="checkbox" className="switch" id={`switch-lg-${career}`} />
-          <label htmlFor={`switch-lg-${career}`} style={{ "margin": "0.3em" }}></label>
-        </span>
-      </div>
+      <span className="switch switch-lg float-right">
+        <input type="checkbox" className="switch career-switch inactive" id={`switch-lg-${career}`} onClick={() => {this.handleClick(this.props.toggleCareerState(career))}}/>
+        <label htmlFor={`switch-lg-${career}`} style={{ "margin": "0.3em" }}></label>
+      </span>
     );
   }
 }
-
 
 class CareerAccordionHeader extends Component {
   constructor(props){
@@ -64,10 +80,10 @@ class CareerAccordionHeader extends Component {
       <div className="card-header" id={`heading${idx}`}>
         <h2 className="mb-0 card-title" career={career} idx={idx}>
           <ion-icon name={this.props.careers[career].iconName} style={{ "width": "0.8em", "verticalAlign": "middle" }}></ion-icon>
-          <button className="btn btn-light btn-lg" career={career} idx={idx} data-toggle="collapse" data-target={`#collapse${idx}`} aria-expanded="true" aria-controls={`collapse${idx}`}>
+          <button className="btn btn-light btn-lg" career={career} idx={idx} data-toggle="collapse" data-target={`#career-collapse${idx}`} aria-expanded="true" aria-controls={`career-collapse${idx}`}>
             {_util.capitalize(career)}
           </button>
-          <CareerToggleSwitch career={career}/>
+          <CareerToggleSwitch career={career} toggleCareerState={this.props.toggleCareerState}/>
         </h2>
       </div>
     );
@@ -86,10 +102,10 @@ class CareerAccordionPanel extends React.Component {
 
   render() {
       var skillsDescriptions = this.props.careers[this.props.career].skillOptions.map((skill, idx) => {
-        return <SkillCard skill={skill} skills={this.props.skills} key={idx}/>;
+        return <SkillCard skill={skill} skills={this.props.skills} key={idx} isActiveCareer={this.props.isActiveCareer}/>;
       });
       return (
-        <div id={`collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#accordion">
+        <div id={`career-collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#career-accordion">
           <div className="card-body">
             {this.props.careers[this.props.career].summary}
             <br/>
@@ -112,7 +128,13 @@ class CareerStep extends Component {
   render() {
     return (
       <div>
-        <CareerAccordion careers={this.props.charData.careers} skills={this.props.charData.skills}/>
+        <CareerAccordion 
+          careers={this.props.charData.careers} 
+          skills={this.props.charData.skills}
+          toggleCareerState={this.props.toggleCareerState}
+          selectedCareers={this.props.selectedCareers}
+          selectedSkills={this.props.selectedSkills} 
+        />
       </div>
     );
   }
