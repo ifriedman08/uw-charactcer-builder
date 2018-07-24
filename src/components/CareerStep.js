@@ -29,6 +29,7 @@ class CareerAccordion extends React.Component {
               idx={idx} 
               isActiveCareer={this.props.selectedCareers.includes(career)}
               selectedSkills={this.props.selectedSkills}
+              //toggleSkillState={this.props.toggleSkillState}
             />
           </div>
         )
@@ -41,7 +42,7 @@ class CareerAccordion extends React.Component {
             The combination will determine your archetype, your skill choices, 
             your methods and the way you approach challenges and opportunities in the game. 
             Each career gives you 5 skill options for a <strong>total of 10</strong>. 
-            Choose <strong>any 3 skills</strong> fromamong those 10. 
+            Choose <strong>any 3 skills</strong> from among those 10. 
             For example: Clandestine (Stealth) and Explorer (Recklessness and Survival)</p>
         <div id="career-accordion" style={{"margin": "0.3em"}}>
           {accContent}
@@ -132,6 +133,7 @@ class CareerStep extends Component {
           careers={this.props.charData.careers} 
           skills={this.props.charData.skills}
           toggleCareerState={this.props.toggleCareerState}
+          //toggleSkillState={this.props.toggleSkillState}
           selectedCareers={this.props.selectedCareers}
           selectedSkills={this.props.selectedSkills} 
         />

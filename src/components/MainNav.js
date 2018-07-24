@@ -10,8 +10,8 @@ class MainNav extends Component {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-item nav-link" href="#">Career</a>
-                        <a className="nav-item nav-link active" href="#">Origin</a>
+                        <a className="nav-item nav-link" href="#career-header">Career</a>
+                        <a className="nav-item nav-link" href="#origin-header">Origin</a>
                         <a className="nav-item nav-link" href="#">Stats</a>
                         <a className="nav-item nav-link" href="#">Assets</a>
                         <a className="nav-item nav-link" href="#">Persona</a>

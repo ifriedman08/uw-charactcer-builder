@@ -31,6 +31,7 @@ class App extends React.Component {
     };
     this.toggleCareerState = this.toggleCareerState.bind(this)
     this.toggleOriginState = this.toggleOriginState.bind(this)
+    //this.toggleSkillState = this.toggleSkillState.bind(this)
   }
 
   toggleCareerState(career){
@@ -42,8 +43,9 @@ class App extends React.Component {
   
   toggleSkillState(skill){
     var _u = _util;
+   //console.log('toggling skill state');
     this.setState((prevState) => (
-      {careers: _u.toggleElementInArray(skill, prevState.skills)}
+      {skills: _u.toggleElementInArray(skill, prevState.skills)}
     ));
   }
 
@@ -62,12 +64,14 @@ class App extends React.Component {
           <CareerStep 
             charData={charData} 
             toggleCareerState={this.toggleCareerState}
+            //toggleSkillState={this.toggleSkillState}
             selectedCareers={this.state.careers}
             selectedSkills={this.state.skills}
             />
           <OriginStep 
             charData={charData} 
             toggleOriginState={this.toggleOriginState}
+            //toggleSkillState={this.toggleSkillState}
           />
         </div>
       </div>
