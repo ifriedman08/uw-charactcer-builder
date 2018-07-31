@@ -4,6 +4,9 @@ import './App.css';
 import MainNav from './components/MainNav.js';
 import CareerStep from './components/CareerStep';
 import OriginStep from './components/OriginStep';
+import StatsStep from './components/StatsStep';
+import Alert from './components/Alert';
+import AdvancementStep from "./components/AdvancementStep";
 import _util from './_util.js';
 
 console.log(charData);
@@ -15,13 +18,11 @@ class App extends React.Component {
       careers: [],
       origin: [],
       skills: [],
-      stats: {
-        mettle: null,
-        physique: null,
-        expertise: null,
-        influence: null,
-        interface: null
-      },
+      mettle: null,
+      physique: null,
+      expertise: null,
+      influence: null,
+      interface: null,
       workspace: [],
       advancement: [],
       description: [],
@@ -29,9 +30,23 @@ class App extends React.Component {
       name: [],
       archetype: [],
     };
-    this.toggleCareerState = this.toggleCareerState.bind(this)
-    this.toggleOriginState = this.toggleOriginState.bind(this)
-    //this.toggleSkillState = this.toggleSkillState.bind(this)
+    this.toggleCareerState = this.toggleCareerState.bind(this);
+    this.toggleOriginState = this.toggleOriginState.bind(this);
+    this.toggleSkillState = this.toggleSkillState.bind(this);
+    this.setStatValue = this.setStatValue.bind(this);
+    this.setAdvancement = this.setAdvancement.bind(this);
+  }
+
+  setAdvancement(adv) {
+    this.setState({
+      advancement: [adv]
+    })
+  }
+
+  setStatValue(stat, value) {
+    this.setState({
+      [stat]: value
+    })
   }
 
   toggleCareerState(career){
@@ -41,12 +56,11 @@ class App extends React.Component {
     ));
   }
   
-  toggleSkillState(skill){
+  toggleSkillState(skill, x){
     var _u = _util;
-   //console.log('toggling skill state');
     this.setState((prevState) => (
       {skills: _u.toggleElementInArray(skill, prevState.skills)}
-    ));
+    ));    
   }
 
   toggleOriginState(origin){
@@ -61,39 +75,24 @@ class App extends React.Component {
       <div id="app">
         <div>
           <MainNav/>
+          <Alert state={this.state}/>
           <CareerStep 
             charData={charData} 
             toggleCareerState={this.toggleCareerState}
-            //toggleSkillState={this.toggleSkillState}
+            toggleSkillState={this.toggleSkillState}
             selectedCareers={this.state.careers}
             selectedSkills={this.state.skills}
-            />
+          />
           <OriginStep 
             charData={charData} 
             toggleOriginState={this.toggleOriginState}
-            //toggleSkillState={this.toggleSkillState}
+            toggleSkillState={this.toggleSkillState}
+            selectedOrigin={this.state.origin}
+            selectedSkills={this.state.skills}
           />
+          <StatsStep stats={this.state.stats} setStatValue={this.setStatValue}/>
+          <AdvancementStep charData={charData} selectedCareers={this.state.careers} setAdvancement={this.setAdvancement}/>
         </div>
-      </div>
-    );
-  }
-};
-
-class StatsStep extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
-};
-
-class AdvancementStep extends Component {
-  render() {
-    return (
-      <div>
-        
       </div>
     );
   }
