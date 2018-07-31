@@ -17,18 +17,33 @@ class OriginAccordion extends React.Component {
                         idx={idx}
                         origin={origin}
                         skills={this.props.skills}
+                        origins={this.props.origins} 
+                        toggleOriginState={this.props.toggleOriginState}
+                        isActive={this.props.selectedOrigin.includes(origin)}
+                        selectedSkills={this.props.selectedSkills}
                         origins={this.props.origins}
                         toggleOriginState={this.props.toggleOriginState}
                     />
-                    <OriginAccordionPanel origin={origin} skills={this.props.skills} origins={this.props.origins} idx={idx} />
+                    <OriginAccordionPanel 
+                        origin={origin} 
+                        skills={this.props.skills} 
+                        origins={this.props.origins} 
+                        idx={idx} 
+                        isActiveOrigin={this.props.selectedOrigin.includes(origin)}
+                        selectedSkills={this.props.selectedSkills}
+                        toggleSkillState={this.props.toggleSkillState}
+                    />
                 </div>
             )
         });
         return (
-            <div style={{ "paddingTop": "65px" }}>
+            <div style={{ "paddingTop": "2em" }}>
                 <h3 id="origin-header">Step 2: Select Origin</h3>
-                <p>Pick a single origin that most suits your character. This is the character's childhood and formative years. Choose one of the four skills offered by your origin. Note that a character cannot take the same skill twice, even if both their career and origin offers it.</p>
-                <div name="origin-accordion" style={{ "margin": "0.3em" }}>
+                <p>Pick a single origin that most suits your character. 
+                    This is the character's childhood and formative years. 
+                    Choose one of the four skills offered by your origin. 
+                    Note that a character cannot take the same skill twice, even if both their career and origin offers it.</p>
+                <div name="origin-accordion" id="origin-accordion" style={{ "margin": "0.3em" }}>
                     {accContent}
                 </div>
             </div>
@@ -87,7 +102,7 @@ class OriginAccordionPanel extends React.Component {
 
     render() {
         var skillsDescriptions = this.props.origins[this.props.origin].skillOptions.map((skill, idx) => {
-            return <SkillCard skill={skill} skills={this.props.skills} key={idx} />;
+            return <SkillCard skill={skill} skills={this.props.skills} key={idx} isActiveOrigin={this.props.isActiveOrigin} toggleSkillState={this.props.toggleSkillState}/>;
         });
         return (
             <div id={`origin-collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#origin-accordion">
@@ -116,7 +131,10 @@ class OriginStep extends Component {
                 <OriginAccordion
                     origins={this.props.charData.origins}
                     skills={this.props.charData.skills}
+                    toggleSkillState={this.props.toggleSkillState}
                     toggleOriginState={this.props.toggleOriginState}
+                    selectedOrigin={this.props.selectedOrigin}
+                    selectedSkills={this.props.selectedSkills} 
                 />
             </div>
         );
