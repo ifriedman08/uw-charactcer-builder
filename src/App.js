@@ -90,8 +90,8 @@ class App extends React.Component {
             selectedOrigin={this.state.origin}
             selectedSkills={this.state.skills}
           />
-          <StatsStep stats={this.state.stats} setStatValue={this.setStatValue}/>
           <AdvancementStep charData={charData} selectedCareers={this.state.careers} setAdvancement={this.setAdvancement}/>
+          <StatsStep stats={this.state.stats} setStatValue={this.setStatValue}/>
         </div>
       </div>
     );

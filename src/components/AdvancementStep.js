@@ -7,7 +7,7 @@ class AdvancementStep extends Component {
         if (this.props.selectedCareers.length > 2) {
             return (
                 <div style={{ "marginTop": "2em" }}>
-                    <h3 id="adv-header" name="adv-header">Step 4: Select Advancement</h3>
+                    <h3 id="adv-header" name="adv-header">Step 3: Select Advancement</h3>
                     <p>You have selected too many careers. Fix that in <a href="#career-header">Step 1</a>.</p>
                 </div>
             );
