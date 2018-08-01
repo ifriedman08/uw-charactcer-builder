@@ -16,7 +16,7 @@ class MainNav extends Component {
                         <a className="nav-item nav-link" href="#ws-header">Workspace</a>
                         <a className="nav-item nav-link" href="#stats-header">Stats</a>
                         <a className="nav-item nav-link" href="#persona-header">Persona</a>
-                        <a className="nav-item nav-link" href="#asset-header">Assets</a>
+                        <a className="nav-item nav-link" href="#assets-header">Assets</a>
                         <a className="nav-item nav-link" href="#link-header">Helpful Links</a>
                     </div>
                 </div>
