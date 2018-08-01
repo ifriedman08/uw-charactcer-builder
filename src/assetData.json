@@ -1,0 +1,211 @@
+{
+    "weapons": {
+        "melee": {
+            "tags": {
+                "concealed": "Inconspicuous, easily hidden, doesn't show on scanners.",
+                "defensive": "Can parry, deflect and disarm.",
+                "destructive": "Causes property damage, damages machinery and vehicles.",
+                "energy" : "Glows with incandescent energy, melts, burns, cauterizes.",
+                "flexible": "Whip length capable of binding and lashing. Optimal Range: Adjacent",
+                "glove": "A heavy, weaponized glove. Can still manipulate objects.",
+                "hafted": "Two handed. Long reach. Sweeping attacks. Range: Melee, Adjacent",
+                "heavy": "Two handed. Massive, resilient. Devastating attacks, hard to block.",
+                "impact": "Heavy kinetic force that breaks bones and knocks people over.",
+                "impaling": "Can pin targets, pierce thin materials, and stab with great accuracy.",
+                "penetrating": "Ignores Armor.",
+                "ripper": "Loud mechanical motion rips, tears, grinds or shreds.",
+                "severing": "Chops, cuts, causes bleeding and can sever limbs.",
+                "shock": "Electrocutes, causes malfunctions in electronics and robots.",
+                "stun": "Non-lethal. Stuns, snares or renders unconscious.",
+                "stylish": "Looks impressive, distinctive and unique.",
+                "thrown": "Handful of small weapons/ single two-handed. Range: Adjacent, Close."
+            }
+        },
+        "firearm": {
+            "designs" : {
+                "pistol": "One handed ranged weapon, Optimal Ranges: Adjacent, Close.",
+                "rifle": "Two handed ranged weapon, Optimal Ranges: Close, Far."
+            },
+            "tags": {
+                "attachment": "Attach Class 0 Small weapon with Sharp, Ripper, Energy or Shock.",
+                "burst": "Instead of a single shot, sprays shots in a wide cone.",
+                "concealed": "Inconspicuous, easily hidden, doesn't show on scanners.",
+                "chemical": "Creates lasting chemical reaction. Ex: fire, corrosion, frost, smoke, etc.",
+                "destructive": "Causes property damage, damages machinery and vehicles.",
+                "explosive": "Loud. Causes messy wounds, property damage near the point of impact.",
+                "impact": "Heavy kinetic force that breaks bones and knocks people over.",
+                "keyed": "Can only be fired by you unless you unlock it.",
+                "laser": "Projects focused beams of energy that can cut or melt materials.",
+                "launcher": "Lobbed, arcing projectile with a modest area of effect.",
+                "mounted": "Mounted to a forearm or shoulder rig, keeps hands free.",
+                "penetrating": "Ignores Armor.",
+                "plasma": "Fires bright bolts of supercharged, burning energy.",
+                "rapid-fire": "Unleashes suppressing fire at multiple targets.",
+                "scope": "Can fire at distant objects. Optimal Ranges: Far, Distant.",
+                "shock": "Electrocutes, causes malfunctions in electronics and robots.",
+                "shrapnel": "Causes amputation, bleeding and disfigurement in a small radius.",
+                "silenced": "Suppressed muzzle flash and practically silent shot.",
+                "stabilized": "No recoil, can be used in micro-gravity environments.",
+                "stun": "Non-lethal. Stuns, snares or renders unconscious.",
+                "stylish": "Looks impressive, distinctive and unique."
+            }
+        },
+        "heavy": {
+            "tags": {
+                "breaching": "Damages starships and reinforced structures.",
+                "chemical": "Creates lasting chemical reaction. Ex: fire, corrosion, frost, smoke, etc.",
+                "concussive": "Exceptionally loud and bright. Deafens, blinds and knocks away.",
+                "detonation": "Explodes in a large blast radius.",
+                "impact": "Heavy kinetic force that breaks bones and knocks people over.",
+                "keyed": "Can only be fired by you unless you unlock it.",
+                "laser": "Projects focused beams ofenergy that can cut or melt materials.",
+                "penetrating": "Ignores armor.",
+                "plasma": "Fires bright bolts of supercharged, burning energy.",
+                "seeking": "Projectile arcs towards a moving target.",
+                "shock": "Electorcutes, causes melfunctions in electronics and robots.",
+                "shrapnel": "Causes amputation, bleeding and disfigurement in a wide radius.",
+                "spray": "Reduce distance, coverage increases to wide cone. Optimal Range: Close.",
+                "stun": "Non-lethal. Stuns, snares or renders unconscious.",
+                "stylish": "Looks impressive, distinct and unique",
+                "sustained": "Unleashes a constant suppressing fire at multiple targets."
+            }
+        },
+        "explosive": {
+            "design": {
+                "timed-grenade": "One-handed thrown explosive. Explodes after fixed time. Optimal Range: Close.",
+                "triggered-charge": "Two-handed placed explosive. Explodes when conditions are met (signal, proximity, etc). Optimal Range: Melee.",
+                "destructive-charge": "Two-handed placed explosive. Causes property damage, damages machinery and vehicles. Optimal Range: Melee."
+            },
+            "tags": {
+                "breaching": "Breaches reinforced buildings and starships. Charge only.",
+                "chemical": "Creates lasting chemical reaction. Ex: fire, corrosion, frost, smoke, etc.",
+                "cluster": "Scatters secondary explosives in the area of effect, which then detonate.",
+                "concealed": "Inconspicuous, easily hidden, doesn't show on scanners.",
+                "concussive": "Exceptionally loud and bright. Deafens, blinds and knocks away.",
+                "destructive": "Causes property damage, damages machinery and vehicles. Grenade only.",
+                "focused": "Directed high explosive force, little collateral damage.",
+                "haywire": "Disrupts electronic systems, scanners and advanced weaponry.",
+                "high-yield": "Massive area of effect, city block or more. Charge only.",
+                "kinetic": "Heavy kinetic force that breaks bones and knocks people over.",
+                "plasma": "Creates a nove of incandescent energy that vaporizes matter.",
+                "shock": "Electrocutes, causes malfunctions in electronics and robots.",
+                "shrapnel": "Causes amputation, bleeding and disfigurement in a wide radius.",
+                "sticky": "Attaches itself to any surface, difficult to remove.",
+                "stun": "Non-lethal. Stuns, snares or renders unconscious.",
+                "stylish": "The explosion looks impresive, distinct and unique."
+            }
+        }
+    },
+    "attire": {
+        "design": {
+            "rugged": "Crude, patched, aged and worn.",
+            "simple": "Utilitarian, favors function over looks.",
+            "cultural": "Incorporates popular styles/elements of a culture.",
+            "formal": "Well cut and stylish.",
+            "uniform": "Easily identifiable as belonging to a specific faction or group."
+        },
+        "tags": {
+            "armored": "+2 Armor.",
+            "carapace": "Clumsy +3 Armor.",
+            "comms": "Can receive and broadcast signals over great distances.",
+            "connected": "Built-in CPU eith eye-piece HUD, connects wirelessly to other systems.",
+            "impressive": "Distinctive, intimidating, with embellishments and accessories.",
+            "jump-jets": "Can give small burst jumps, slow descent, and controlled flight in zero-g.",
+            "meshweave": "+1 Armor that looks like normal fabric.",
+            "rig": "Choose a Kit: That Kit is integrated in the suit. Can still cary a 2nd Kit.",
+            "tough": "Protects from elements, hard to damage easy to repair.",
+            "sealed": "Airtight suit with helmet and oxygen tank.",
+            "sensor": "Choose a type of information. The wrist screen scans for that subject.",
+            "shielded": "+1 Armor provided by thin, invisible energy shield projected by the suit.",
+            "stealthy": "Muffled, blends in to environments, difficult to pick up on scanners.",
+            "visor": "Choose a type of information. The visor detects that subject."
+        }
+    },
+    "vehicles": {
+        "land": {
+            "design": {
+                "bike": "A fast, two-wheeled vehicle with a maneuverable frame. Up to one passenger.",
+                "groudcar": "A sturdy 4 or 6-wheeled transport. Fits a driver plus up to 4 passengers.",
+                "walker": "A bipedal humanoid chassis with lifter arms. 1 pilot suspended within.",
+                "quadwalker": "A quadruped vehicle for up to 3 people. All-terrain mobility with stability."
+            },
+            "tags": {
+                "agile": "Quick, maneuverable, able to perform stunts.",
+                "armed": "A heavy weapon (purchased separately) attached to the vehicle, fired by the pilot.",
+                "boosters": "Greatly increases overland speed. Allows short jumps.",
+                "controlled": "Can be remotely activated and given directions.",
+                "luxury": "Impressive, high quality and very comfortable. Various quality-of-life features.",
+                "plated": "+3 Armor.",
+                "reinforced": "Slow. +3 Armor. Ignores Armor Piercing and Destructive. Must be Breached.",
+                "rugged": "Protects from elements, resists environmental damage, easy to repair.",
+                "sealed": "Fully enclosed frame with oxygen source. Can function in space, under water, etc.",
+                "sensors": "The vehicle gathers various types of information.",
+                "stealthy": "Silent, difficult to pick up on sensors, occupants invisible to sensors.",
+                "tool": "Choose a melee weapon upgrade to represent a tool attached to this vehicle.",
+                "transport": "Can carry a dozen people or a cargo container. Groundcar and Quad Walker only.",
+                "turret": "A heavy weapon (purchased separately) on a swivel mount, fired by a passenger.",
+                "workspace": "Choose a Kit to be integrated into the vehicle."
+            }
+        },
+        "flyer": {
+            "design": {
+                "speeder": "A tiny, maneuverable flying vehicle. Space for a pilot and at most one passenger.",
+                "shuttle": "A flying vehicle for up to six people that can hover and take off vertically."
+            },
+            "tags": {
+                "agile": "Quick, maneuverable, able to perform stunts.",
+                "armored": "+2 Armor.",
+                "armed": "A heavy weapon (purchased separately) attached to the vehicle, fired by the pilot.",
+                "controlled": "Can be remotely activated and given directions.",
+                "luxury": "Impressive, high quality and very comfortable. Various quality-of-life features.",
+                "rugged": "Protects from elements, resists environmental damage, easy to repair.",
+                "sealed": "Fully enclosed frame with oxygen source. Can function in space, under water, etc.",
+                "sensors": "The vehicle gathers various types of information.",
+                "shielded": "+1 Armor provided by external grav field. Blocks remote Access and hacking.",
+                "stealthy": "Silent, difficult to pick up on sensors, occupants invisible to sensors.",
+                "tool": "Choose a melee weapon upgrade to represent a tool attached to this vehicle.",
+                "transport": "Can carry a dozen people or a cargo container. Groundcar and Quad Walker only.",
+                "turret": "A heavy weapon (purchased separately) on a swivel mount, fired by a passenger.",
+                "workspace": "Choose a Kit to be integrated into the vehicle."
+            }
+        }
+    },
+    "crew": {
+        "design": {
+            "squad": "Disciplined and stolid. Equipped with a similar type of weaponry (pistols, stun batons, rifles, etc). Able to guard areas and engage in small-scale combat.",
+            "techs": "Educated and well trained. Equipped with basic tools. Able to provide technical or manual assistance to a variety of scientific or engineering projects.",
+            "gang": "Crude and self-reliant. Equipped with a smattering of mismatched weaponry (pistols, shotguns, chains, knives, etc). Able to attack people or break things.",
+            "staff": "Refined and professional. Able to serve guests, keep accounts, prepare meals and perform daily household chores."
+        },
+        "tags": {
+            "armed": "Choose a Class 1 Firearm. The crew is equipped with it and trained in its use.",
+            "artillery": "Able to bombard with artillery, turrets or starship weaponry.",
+            "athletic": "Graceful, swift, strong and flexible. Much better than average, physically.",
+            "beautiful": "Chosen for their good looks and wit. Able to distract and entertain.",
+            "builders": "Able to build small structuresor assist in construction projects.",
+            "criminal": "Able to commit small-scale criminal activity or assist with larger crimes.",
+            "equipped": "Choose a Kit. The crew carries various tools from that kit and can use them.",
+            "fearless": "Never afraid or intimidated, will follow insane orders but often go too far.",
+            "imposing": "Imposing in some way. Able to frighten, threaten, dissuade, etc.",
+            "informants": "Able to collect information and report back, or pass on information.",
+            "loyal": "Only take orders from you. Quickly recovers to their normal disposition.",
+            "mechanics": "Able to service and maintain machinery, and assist in repairs and overhauls.",
+            "medics": "Able to provide long-term convalescent care or assist in medical procedures.",
+            "numerous": "There are a large number of them, you have trouble keeping track of them all.",
+            "rugged": "Can work in harsh climates for extended periods of time.",
+            "stealthy": "Able to sneak into (or out of) places, and pass unnoticed.",
+            "teamsters": "Able to quickly load , unload, assemble and pack away heavy objects and cargo.",
+            "wreckers": "Able to destroy terrain and structures."
+        }
+    },
+    "kits": {
+        "broadcast": "Tools to send and receive signals. Collapsible broadcast antenna, signal boosters, wires, vid screens, recording hardware, portable data drives, etc.",
+        "computer" : "Tools to access, program, diagnose and repair computer systems. Laptops, diagnostic tools, wires, handheld power sources, portable data drives, etc.",
+        "engineering" : "Tools to repair and dismantle machinery. Hammers, drills, cutters, wrenches, welders, grips, cables, diagnostic tools, cage lamps, misc spare parts, etc.",
+        "infiltration" : "Tools to gain access to forbidden places. Mechanical lockpicks, intrusion hardware, chloroform, glass cutters, disguises, ropes, climbing tools, etc.",
+        "medical" : "Tools to perform medical treatments. Bandages, scalpels, gels, stimms, surgical braces, dermal regen spray, etc.",
+        "research" : "Tools to study and experiment out in the field. Specimen jars, hammer and chisel, scalpels, chemical analyser, data recorder, etc.",
+        "survey" : "Tools to observe and monitor. Range finders, tracking devices, motion sensors, deep scanner tripod, holo-map projector, data recorder, deployable transmitter, etc.",
+        "wilderness" : "Tools to traverse hostile landscapes. Ropes, climbing tools, light sources, breather mask, tent, sleeping bag, heat lamp, thermal blanket, water filter, etc."
+    }
+}

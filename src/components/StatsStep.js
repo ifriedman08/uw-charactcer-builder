@@ -28,7 +28,7 @@ class StatsStep extends Component {
     render() {
         return (
             <div style={{"marginTop": "2em"}}>
-                <h3 id="stats-header" name="stats-header">Step 4: Distribute Stats</h3>
+                <h3 id="stats-header" name="stats-header">Step 5: Distribute Stats</h3>
                 <p>Now for the numbers. Assign one of the following numbers to each of your stats 
                     (Mettle, Physique, Expertise, Influence and Interface):<br/>
                     No repeats (except for the "+1").

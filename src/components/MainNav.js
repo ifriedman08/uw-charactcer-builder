@@ -12,10 +12,12 @@ class MainNav extends Component {
                     <div className="navbar-nav">
                         <a className="nav-item nav-link" href="#career-header">Career</a>
                         <a className="nav-item nav-link" href="#origin-header">Origin</a>
-                        <a className="nav-item nav-link" href="#stats-header">Stats</a>
                         <a className="nav-item nav-link" href="#adv-header">Advancement</a>
-                        <a className="nav-item nav-link" href="#">Assets</a>
-                        <a className="nav-item nav-link" href="#">Persona</a>
+                        <a className="nav-item nav-link" href="#ws-header">Workspace</a>
+                        <a className="nav-item nav-link" href="#stats-header">Stats</a>
+                        <a className="nav-item nav-link" href="#persona-header">Persona</a>
+                        <a className="nav-item nav-link" href="#asset-header">Assets</a>
+                        <a className="nav-item nav-link" href="#link-header">Helpful Links</a>
                     </div>
                 </div>
             </nav>

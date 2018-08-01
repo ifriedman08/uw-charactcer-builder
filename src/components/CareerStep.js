@@ -35,7 +35,7 @@ class CareerAccordion extends React.Component {
         )
       });
       return (
-      <div style={{"paddingTop": "65px"}}>
+      <div>
         <h3 id="career-header">Step 1: Select Careers</h3>
           <p>Pick 2 <strong>careers</strong> from the options below by flipping the switches. 
             These careers are basically classes from D&D. 

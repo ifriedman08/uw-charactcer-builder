@@ -7,6 +7,10 @@ import OriginStep from './components/OriginStep';
 import StatsStep from './components/StatsStep';
 import Alert from './components/Alert';
 import AdvancementStep from "./components/AdvancementStep";
+import WorkspaceStep from "./components/WorkspaceStep";
+import PersonaStep from "./components/PersonaStep";
+import BackstoryModal from "./components/BackstoryModal";
+import AssetsStep from "./components/AssetsStep";
 import _util from './_util.js';
 
 console.log(charData);
@@ -25,7 +29,9 @@ class App extends React.Component {
       interface: null,
       workspace: [],
       advancement: [],
-      description: [],
+      description1: [],
+      description2: [],
+      description3: [],
       assets: [],
       name: [],
       archetype: [],
@@ -35,11 +41,19 @@ class App extends React.Component {
     this.toggleSkillState = this.toggleSkillState.bind(this);
     this.setStatValue = this.setStatValue.bind(this);
     this.setAdvancement = this.setAdvancement.bind(this);
+    this.setName = this.setName.bind(this);
+    this.setDescription = this.setDescription.bind(this);
   }
 
   setAdvancement(adv) {
     this.setState({
       advancement: [adv]
+    })
+  }
+  
+  setAdvancement(ws) {
+    this.setState({
+      workspace: [ws]
     })
   }
 
@@ -70,12 +84,29 @@ class App extends React.Component {
     ));
   }
 
+  setName(newName){
+    this.setState({
+      name: [newName]
+    })
+  }
+  
+  setDescription(desc, idx){
+    this.setState({
+      ['description'+(idx).toString()]: [desc]
+    })
+  }
+
   render() {
     return (
       <div id="app">
         <div>
           <MainNav/>
           <Alert state={this.state}/>
+          <button type="button" style={{ "marginTop": "4em", "marginBottom": "2em" }} className="btn btn-info btn-lg btn-block col-lg-4" data-toggle="modal" data-target="#exampleModal">
+            Learn the backstory!
+          </button>
+          <BackstoryModal/>
+          <div className="dropdown-divider"></div>
           <CareerStep 
             charData={charData} 
             toggleCareerState={this.toggleCareerState}
@@ -91,38 +122,35 @@ class App extends React.Component {
             selectedSkills={this.state.skills}
           />
           <AdvancementStep charData={charData} selectedCareers={this.state.careers} setAdvancement={this.setAdvancement}/>
+          <div className="dropdown-divider"></div>
+          <WorkspaceStep charData={charData} selectedCareers={this.state.careers} setWorkspace={this.setWorkspace}/>
+          <div className="dropdown-divider"></div>
           <StatsStep stats={this.state.stats} setStatValue={this.setStatValue}/>
+          <div className="dropdown-divider"></div>
+          <PersonaStep 
+            charData={charData} 
+            selectedCareers={this.state.careers} 
+            selectedOrigin={this.state.origin} 
+            setDescription={this.setDescription}
+            setName={this.setName}
+          />
+          <div className="dropdown-divider"></div>
+          <AssetsStep/>
+          <div className="dropdown-divider"></div>
+          <h3 name="link-header" id="link-header">Helpful links and resources:</h3>
+          <div className="list-group" id="list-tab" role="tablist">
+            <br/>
+            <a className="btn btn-info col-lg-4" href="https://drive.google.com/file/d/1agL2dGUN1oJJTgx5ySFXw6aP912XEPXS/view?usp=sharing" target="_blank">Uncharted Worlds: Rulebook PDF</a>
+            <br/>
+            <a className="btn btn-info col-lg-4" href="https://drive.google.com/file/d/1qYB8_8l0pOdH1Px4pqAgad3cqbrkhcRc/view?usp=sharing" target="_blank">Uncharted Worlds: Blank Character Sheet</a>
+            <br/>
+            <a className="btn btn-info col-lg-4" href="https://donjon.bin.sh/scifi/name/#type=cyberpunk;cyberpunk=Modern%20Male" target="_blank">SciFi Name Generator</a>
+            <br/>
+            <a className="btn btn-info col-lg-4" href="https://www.youtube.com/watch?v=1EtZWC68Kcg" target="_blank">Uncharted Worlds: Basic Gameplay Intro</a>
+            <br/>
+            <a className="btn btn-info col-lg-4" href="https://www.youtube.com/watch?v=a4vTLeXam4Q" target="_blank">Uncharted Worlds: Basic Combat Intro</a>
+          </div>
         </div>
-      </div>
-    );
-  }
-};
-
-class WorkspaceStep extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
-};
-
-class DescriptionStep extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
-};
-
-class AssetsStep extends Component {
-  render() {
-    return (
-      <div>
-        
       </div>
     );
   }
