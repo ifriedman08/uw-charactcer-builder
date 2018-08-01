@@ -2,7 +2,7 @@
   "name": "character_builder_2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ifriedman08.github.io/uw-charactcer-builder",
+  "homepage": "http://ifriedman08.github.io/uw-character-builder",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "react": "^16.4.1",
