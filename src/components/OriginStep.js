@@ -96,9 +96,9 @@ class OriginAccordionPanel extends React.Component {
         super(props);
     };
 
-    toggleSwitch(params) {
-        console.log('toggled!');
-    };
+    // toggleSwitch(params) {
+    //     console.log('toggled!');
+    // };
 
     render() {
         var skillsDescriptions = this.props.origins[this.props.origin].skillOptions.map((skill, idx) => {

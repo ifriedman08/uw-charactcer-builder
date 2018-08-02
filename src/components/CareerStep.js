@@ -103,9 +103,9 @@ class CareerAccordionPanel extends React.Component {
     super(props);
   };
   
-  toggleSwitch(params) {
-    console.log('toggled!');
-  };
+  // toggleSwitch(params) {
+  //   console.log('toggled!');
+  // };
 
   render() {
       var skillsDescriptions = this.props.careers[this.props.career].skillOptions.map((skill, idx) => {

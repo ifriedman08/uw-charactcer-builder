@@ -13,7 +13,7 @@ import BackstoryModal from "./components/BackstoryModal";
 import AssetsStep from "./components/AssetsStep";
 import _util from './_util.js';
 
-console.log(charData);
+// console.log(charData);
 
 class App extends React.Component {
   constructor(props) {
