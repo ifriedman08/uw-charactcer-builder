@@ -21,8 +21,8 @@ class OriginAccordion extends React.Component {
                         toggleOriginState={this.props.toggleOriginState}
                         isActive={this.props.selectedOrigin.includes(origin)}
                         selectedSkills={this.props.selectedSkills}
-                        origins={this.props.origins}
                         toggleOriginState={this.props.toggleOriginState}
+                        selectedOrigin={this.props.selectedOrigin}
                     />
                     <OriginAccordionPanel 
                         origin={origin} 
@@ -56,13 +56,11 @@ class OriginToggleSwitch extends Component {
         super(props);
     };
 
-    handleClick(params) { };
-
     render() {
         var origin = this.props.origin;
         return (
             <span className="switch switch-lg float-right">
-                <input type="checkbox" className="switch origin-switch inactive" id={`switch-lg-${origin}`} onClick={() => { this.handleClick(this.props.toggleOriginState(origin)) }} />
+                <input type="checkbox" className="switch origin-switch" id={`switch-lg-${origin}`} onClick={(x) => { this.props.toggleOriginState(origin, x.target.checked) }} />
                 <label htmlFor={`switch-lg-${origin}`} style={{ "margin": "0.3em" }}></label>
             </span>
         );
@@ -83,7 +81,9 @@ class OriginAccordionHeader extends Component {
                     <button className="btn btn-light btn-lg" origin={origin} idx={idx} data-toggle="collapse" data-target={`#origin-collapse${idx}`} aria-expanded="true" aria-controls={`origin-collapse${idx}`}>
                         {_util.capitalize(origin)}
                     </button>
-                    <OriginToggleSwitch origin={origin} toggleOriginState={this.props.toggleOriginState} />
+                    {(this.props.selectedOrigin.length !== 1 || this.props.isActive) &&
+                        <OriginToggleSwitch origin={origin} toggleOriginState={this.props.toggleOriginState} selectedOrigin={this.props.selectedOrigin} />
+                    }
                 </h2>
             </div>
         );
@@ -102,7 +102,7 @@ class OriginAccordionPanel extends React.Component {
 
     render() {
         var skillsDescriptions = this.props.origins[this.props.origin].skillOptions.map((skill, idx) => {
-            return <SkillCard skill={skill} skills={this.props.skills} key={idx} isActiveOrigin={this.props.isActiveOrigin} toggleSkillState={this.props.toggleSkillState}/>;
+            return <SkillCard skill={skill} skills={this.props.skills} selectedSkills={this.props.selectedSkills} key={idx} isActiveOrigin={this.props.isActiveOrigin} toggleSkillState={this.props.toggleSkillState}/>;
         });
         return (
             <div id={`origin-collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#origin-accordion">

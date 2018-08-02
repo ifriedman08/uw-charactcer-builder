@@ -7,13 +7,12 @@ class PersonaStep extends Component {
     render() {
         var personaContent;
         
-        if (this.props.selectedCareers.length != 2 || this.props.selectedOrigin.length != 1) {
+        if (this.props.selectedCareers.length !== 2 || this.props.selectedOrigin.length !== 1) {
             personaContent = <p>You need exactly <strong>2 careers</strong> and <strong>1 origin</strong> before you can complete this step.</p>
         } else {
             var career1 = this.props.selectedCareers[0];
             var career2 = this.props.selectedCareers[1];
             var origin = this.props.selectedOrigin[0];
-            var test = 
             personaContent = (
                 <div>
                     <input type="text" id="charName" onChange={(x) => {this.props.setName(x.target.value)}} className="form-control input-group-lg" placeholder="Character Name" aria-label="CharName" aria-describedby="basic-addon1"/>

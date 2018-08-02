@@ -63,25 +63,37 @@ class App extends React.Component {
     })
   }
 
-  toggleCareerState(career){
+  toggleCareerState(career, isChecked){
     var _u = _util;
-    this.setState((prevState) => (
-      {careers: _u.toggleElementInArray(career, prevState.careers)}
-    ));
+    this.setState((prevState) => {
+      if (isChecked) {
+        return {careers: _u.ensureElementPresent(career, prevState.careers)}
+      } else {
+        return {careers: _u.ensureElementAbsent(career, prevState.careers)}
+      }
+    });
   }
   
-  toggleSkillState(skill, x){
+  toggleSkillState(skill, isChecked){
     var _u = _util;
-    this.setState((prevState) => (
-      {skills: _u.toggleElementInArray(skill, prevState.skills)}
-    ));    
+    this.setState((prevState) => {
+      if (isChecked) {
+        return {skills: _u.ensureElementPresent(skill, prevState.skills)}
+      } else {
+        return {skills: _u.ensureElementAbsent(skill, prevState.skills)}
+      }
+    });    
   }
-
-  toggleOriginState(origin){
+  
+  toggleOriginState(origin, isChecked){
     var _u = _util;
-    this.setState((prevState) => (
-      {origin: _u.toggleElementInArray(origin, prevState.origin)}
-    ));
+    this.setState((prevState) => {
+      if (isChecked) {
+        return {origin: _u.ensureElementPresent(origin, prevState.origin)}
+      } else {
+        return {origin: _u.ensureElementAbsent(origin, prevState.origin)}
+      }
+    });    
   }
 
   setName(newName){

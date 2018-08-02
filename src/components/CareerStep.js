@@ -21,6 +21,7 @@ class CareerAccordion extends React.Component {
               toggleCareerState={this.props.toggleCareerState}
               isActive={this.props.selectedCareers.includes(career)}
               selectedSkills={this.props.selectedSkills}
+              selectedCareers={this.props.selectedCareers}
             />
             <CareerAccordionPanel 
               career={career} 
@@ -42,6 +43,7 @@ class CareerAccordion extends React.Component {
             The combination will determine your archetype, your skill choices, 
             your methods and the way you approach challenges and opportunities in the game. 
             Each career gives you 5 skill options for a <strong>total of 10</strong>. 
+            Click on a career name to expand or collapse its skill list.
             Choose <strong>any 3 skills</strong> from among those 10. 
             For example: Clandestine (Stealth) and Explorer (Recklessness and Survival)</p>
           <div name="career-accordion" id="career-accordion" style={{"margin": "0.3em"}}>
@@ -63,7 +65,9 @@ class CareerToggleSwitch extends Component {
     var career = this.props.career;
     return (
       <span className="switch switch-lg float-right">
-        <input type="checkbox" className="switch career-switch inactive" id={`switch-lg-${career}`} onClick={() => {this.handleClick(this.props.toggleCareerState(career))}}/>
+        <input type="checkbox" className="switch career-switch inactive" id={`switch-lg-${career}`} onClick={(x) => {
+          this.props.toggleCareerState(career, x.target.checked);
+        }}/>
         <label htmlFor={`switch-lg-${career}`} style={{ "margin": "0.3em" }}></label>
       </span>
     );
@@ -84,7 +88,9 @@ class CareerAccordionHeader extends Component {
           <button className="btn btn-light btn-lg" career={career} idx={idx} data-toggle="collapse" data-target={`#career-collapse${idx}`} aria-expanded="true" aria-controls={`career-collapse${idx}`}>
             {_util.capitalize(career)}
           </button>
-          <CareerToggleSwitch career={career} toggleCareerState={this.props.toggleCareerState}/>
+          {(this.props.selectedCareers.length !== 2 || this.props.isActive) &&
+            <CareerToggleSwitch career={career} toggleCareerState={this.props.toggleCareerState}/>
+          }
         </h2>
       </div>
     );
@@ -103,7 +109,7 @@ class CareerAccordionPanel extends React.Component {
 
   render() {
       var skillsDescriptions = this.props.careers[this.props.career].skillOptions.map((skill, idx) => {
-        return <SkillCard skill={skill} skills={this.props.skills} key={idx} isActiveCareer={this.props.isActiveCareer} toggleSkillState={this.props.toggleSkillState}/>;
+        return <SkillCard skill={skill} skills={this.props.skills} selectedSkills={this.props.selectedSkills} key={idx} isActiveCareer={this.props.isActiveCareer} toggleSkillState={this.props.toggleSkillState}/>;
       });
       return (
         <div id={`career-collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#career-accordion">
