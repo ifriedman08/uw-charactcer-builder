@@ -85,7 +85,7 @@ class CareerAccordionHeader extends Component {
       <div className="card-header" id={`heading${idx}`}>
         <h2 className="mb-0 card-title" career={career} idx={idx}>
           <ion-icon name={this.props.careers[career].iconName} style={{ "width": "0.8em", "verticalAlign": "middle" }}></ion-icon>
-          <button className="btn btn-light btn-lg" career={career} idx={idx} data-toggle="collapse" data-target={`#career-collapse${idx}`} aria-expanded="true" aria-controls={`career-collapse${idx}`}>
+          <button className="btn btn-light btn-lg" career={career} idx={idx} data-toggle="collapse" data-target={`#career-collapse-${career}`} id={`#career-collapse-${career}`} aria-expanded="true" aria-controls={`career-collapse${idx}`}>
             {_util.capitalize(career)}
           </button>
           {(this.props.selectedCareers.length !== 2 || this.props.isActive) &&
@@ -109,10 +109,10 @@ class CareerAccordionPanel extends React.Component {
 
   render() {
       var skillsDescriptions = this.props.careers[this.props.career].skillOptions.map((skill, idx) => {
-        return <SkillCard skill={skill} skills={this.props.skills} selectedSkills={this.props.selectedSkills} key={idx} isActiveCareer={this.props.isActiveCareer} toggleSkillState={this.props.toggleSkillState}/>;
+        return <SkillCard max={3} skill={skill} skills={this.props.skills} selectedSkills={this.props.selectedSkills} key={idx} isActiveCareer={this.props.isActiveCareer} toggleSkillState={this.props.toggleSkillState}/>;
       });
       return (
-        <div id={`career-collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#career-accordion">
+        <div id={`career-collapse-${this.props.career}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#career-accordion">
           <div className="card-body">
             {this.props.careers[this.props.career].summary}
             <br/>

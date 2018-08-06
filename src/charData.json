@@ -311,11 +311,11 @@
       "workspaceOptions": [
         {
           "name": "medical",
-          "description": "Sterile environment. Medbay, cryotubes, surgical servo arms, isolation chamber, recovery ward"
+          "description": "Sterile environment. Medbay, cryotubes, surgical servo arms, isolation chamber, recovery ward."
         },
         {
           "name": "research",
-          "description": "Sensors gather scientific readings. Laboratory, containment units, sample scanners, sealed storage"
+          "description": "Sensors gather scientific readings. Laboratory, containment units, sample scanners, sealed storage."
         }
       ],
       "advancementOptions": [
@@ -335,11 +335,11 @@
       "workspaceOptions": [
         {
           "name": "stealthy",
-          "description": "Difficult to detect, high tech camouflage, cloaking or concealment. Scanning bafflers, sound dampening, hidden doors/rooms"
+          "description": "Difficult to detect, high tech camouflage, cloaking or concealment. Scanning bafflers, sound dampening, hidden doors/rooms."
         },
         {
           "name": "secure",
-          "description": "Sensors to track people and movement. Security cameras, monitoring stations, holding cells, security doors"
+          "description": "Sensors to track people and movement. Security cameras, monitoring stations, holding cells, security doors."
         }
       ],
       "advancementOptions": [
@@ -359,11 +359,11 @@
       "workspaceOptions": [
         {
           "name": "mercantile",
-          "description": "Prominent advertisement, easy access. Large cargo storage space, automatic loader-unloader systems"
+          "description": "Prominent advertisement, easy access. Large cargo storage space, automatic loader-unloader systems."
         },
         {
           "name": "leisure",
-          "description": "Relaxing, inviting, well-lit. Studio, lounge, entertainment systems, recreation area"
+          "description": "Relaxing, inviting, well-lit. Studio, lounge, entertainment systems, recreation area."
         }
       ],
       "advancementOptions": [
@@ -383,11 +383,11 @@
       "workspaceOptions": [
         {
           "name": "rugged",
-          "description": "Withstands harsh climates and weather. Decontamination units, hydroponics facilities, advanced water/air/waste recyclers, self-sufficient"
+          "description": "Withstands harsh climates and weather. Decontamination units, hydroponics facilities, advanced water/air/waste recyclers, self-sufficient."
         },
         {
           "name": "survey",
-          "description": "Planetary scanners (weather, geological activity, etc). Probe launcher, topography holo-projector, motor-pool"
+          "description": "Planetary scanners (weather, geological activity, etc). Probe launcher, topography holo-projector, motor-pool."
         }
       ],
       "advancementOptions": [
@@ -407,11 +407,11 @@
       "workspaceOptions": [
         {
           "name": "refinery",
-          "description": "Heavy raw-material collectors. Gathers, processes raw matter into refined materials. Material storage tanks"
+          "description": "Heavy raw-material collectors. Gathers, processes raw matter into refined materials. Material storage tanks."
         },
         {
           "name": "manufactory",
-          "description": "Engineering bays. Builds, upgrades and repairs. Workbenches, tool racks, winches, pulleys, lifts"
+          "description": "Engineering bays. Builds, upgrades and repairs. Workbenches, tool racks, winches, pulleys, lifts."
         }
       ],
       "advancementOptions": [
@@ -431,11 +431,11 @@
       "workspaceOptions": [
         {
           "name": "armored",
-          "description": "Made of reinforced materials. Difficult to damage, can withstand direct impacts and explosions. Reinforced blast doors, structurally sound"
+          "description": "Made of reinforced materials. Difficult to damage, can withstand direct impacts and explosions. Reinforced blast doors, structurally sound."
         },
         {
           "name": "barracks",
-          "description": "Efficient, defensible, practical. Berthing for many soldiers, lockers, gym, training ring, mobilization area"
+          "description": "Efficient, defensible, practical. Berthing for many soldiers, lockers, gym, training ring, mobilization area."
         }
       ],
       "advancementOptions": [
@@ -455,11 +455,11 @@
       "workspaceOptions": [
         {
           "name": "habitation",
-          "description": "Living space for many guests or crew. Communal eating rooms, extended life-support/facilities"
+          "description": "Living space for many guests or crew. Communal eating rooms, extended life-support/facilities."
         },
         {
           "name": "stately",
-          "description": "Expensive, luxurious, finely appointed décor. More expensive to maintain, but provides much higher quality of life"
+          "description": "Expensive, luxurious, finely appointed décor. More expensive to maintain, but provides much higher quality of life."
         }
       ],
       "advancementOptions": [
@@ -479,11 +479,11 @@
       "workspaceOptions": [
         {
           "name": "facade",
-          "description": "False identification/registry, disguised as something else. Crawlspaces, hidden compartments, false walls"
+          "description": "False identification/registry, disguised as something else. Crawlspaces, hidden compartments, false walls."
         },
         {
           "name": "sleazy",
-          "description": "Ramshackle, grimy, dimly lit. Space for drinking, smoking, recreational drug use, or other vices"
+          "description": "Ramshackle, grimy, dimly lit. Space for drinking, smoking, recreational drug use, or other vices."
         }
       ],
       "advancementOptions": [
@@ -503,11 +503,11 @@
       "workspaceOptions": [
         {
           "name": "navigation",
-          "description": "Wide bay windows, observation decks, star-charts, holo-screens. Satellite uplinks, orbital tracking systems, airspace control/coordination tower"
+          "description": "Wide bay windows, observation decks, star-charts, holo-screens. Satellite uplinks, orbital tracking systems, airspace control/coordination tower."
         },
         {
           "name": "launch pad",
-          "description": "Aircraft/shuttle hangar with wide bay doors, launchpads for shuttles and speeders"
+          "description": "Aircraft/shuttle hangar with wide bay doors, launchpads for shuttles and speeders."
         }
       ],
       "advancementOptions": [
@@ -527,11 +527,11 @@
       "workspaceOptions": [
         {
           "name": "communication",
-          "description": "High-powered communications array, transceivers, antennae. Screens, conference rooms, holo-projectors"
+          "description": "High-powered communications array, transceivers, antennae. Screens, conference rooms, holo-projectors."
         },
         {
           "name": "observer",
-          "description": "Advanced, multi-band sensors, capable of long-distance scans. Probe launchers. Recording equipment, shielded data storage"
+          "description": "Advanced, multi-band sensors, capable of long-distance scans. Probe launchers. Recording equipment, shielded data storage."
         }
       ],
       "advancementOptions": [

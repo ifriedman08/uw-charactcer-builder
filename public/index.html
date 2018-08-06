@@ -17,9 +17,11 @@
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
     <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+
     <title>UW - Character Builder</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#header-nav" data-offset="200">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -30,6 +32,63 @@
         $('.navbar-collapse').collapse('hide');
         document.getElementById(this.href.slice(this.href.indexOf('#') + 1)).scrollIntoView({ behavior: "smooth" })
       });
+      
+      $('body').scrollspy({ target: '#header-nav' })
+      
+      $('body').on('click', 'a#submit', function (e) {
+        var doc = new jsPDF();
+
+        var cap = function (str) {
+          return  str[0].toUpperCase() + str.slice(1);
+        }
+
+        var selectedData = JSON.parse(localStorage.uwCharData);
+        var skillInfo = JSON.parse(localStorage.skillInfo);
+
+        doc.addImage('uwbcs.jpeg', 'JPEG', 0, 0, 210, 300);
+        doc.text( 25, 40, selectedData.name);
+        
+        doc.text( 17, 62, "Careers: " + cap(selectedData.careers[0]) + " + " + cap(selectedData.careers[1]));
+        doc.text( 17, 70, "Origin: " + cap(selectedData.origin[0]));
+        doc.text( 17, 77, selectedData.description1 + ", " + selectedData.description2 + ", " + selectedData.description3);
+
+        doc.text(15, 97, selectedData.mettle);
+        doc.text(35, 97, selectedData.physique);
+        doc.text(53, 97, selectedData.influence);
+        doc.text(72, 97, selectedData.expertise);
+        doc.text(91, 97, selectedData.interface);
+
+        doc.text( 110, 275, "Exp:  O O O O");
+        doc.setFontSize(11);
+
+        doc.text( 115, 55, "Workspace:");
+        doc.text( 115, 60, doc.splitTextToSize(selectedData.workspace[0], 80));
+
+        doc.text( 110, 265, doc.splitTextToSize(selectedData.advancement[0], 80));
+        
+        doc.text( 17, 130, doc.splitTextToSize(
+          cap(selectedData.careerSkills[0]) + ":"
+          + "\n" 
+          + skillInfo[selectedData.careerSkills[0]]
+          + "\n"
+          + "\n"
+          + cap(selectedData.careerSkills[1]) + ":"
+          + "\n" 
+          + skillInfo[selectedData.careerSkills[1]]
+          + "\n"
+          + "\n"
+          + cap(selectedData.careerSkills[2]) + ":"
+          + "\n" 
+          + skillInfo[selectedData.careerSkills[2]]
+          + "\n"
+          + "\n"
+          + cap(selectedData.originSkill[0]) + ":"
+          + "\n" 
+          + skillInfo[selectedData.originSkill[0]] , 80)
+      );
+
+        doc.save('uw-character-sheet.pdf');
+      })
     </script>
   </body>
 </html>

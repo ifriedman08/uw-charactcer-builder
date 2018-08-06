@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StatSelector from "./StatSelector.js"
+import StatSelector from './StatSelector.js'
 
 const statDictionary = [
     {
@@ -47,7 +47,7 @@ class StatsStep extends Component {
 class StatsCard extends Component {
     render() {
         return (
-            <div className="col-lg-4" style={{"display": "inline-block"}}>
+            <div className="col-lg-4 col-sm-6" style={{"display": "inline-block"}}>
                 <div className="card" style={{"margin": "1em", "height": "20em"}}>
                     <h5 className="card-header">{this.props.name}</h5>
                     <div className="card-body">

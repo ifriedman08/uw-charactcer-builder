@@ -21,9 +21,9 @@ class WorkspaceStep extends Component {
                         Otherwise, the workspace exists as a structure or sector in the current setting.
                     </p>
                     <select className="custom-select custom-select-lg mb-3" onChange={(x) => { this.props.setWorkspace(x.target.value) }}>
-                        <option defaultValue>Select your workspace</option>
+                        <option defaultValue value="">Select your workspace</option>
                         {workspaceList.map((ws, idx) => {
-                            return <option key={idx} value={ws.name + ' ' + ws.description}>{_u.capitalize(ws.name)} : {ws.description}</option>
+                            return <option key={idx} value={_u.capitalize(ws.name) + ' - ' + ws.description}>{_u.capitalize(ws.name)}: {ws.description}</option>
                         })}
                     </select>
                 </div>)

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _u from './../_util.js';
 
 class PersonaStep extends Component {
     test(){
@@ -15,6 +16,9 @@ class PersonaStep extends Component {
             var origin = this.props.selectedOrigin[0];
             personaContent = (
                 <div>
+                    <a className="btn btn-info col-lg-4" href="https://donjon.bin.sh/scifi/name/#type=cyberpunk;cyberpunk=Modern%20Male" target="_blank" rel="noopener noreferrer">SciFi Name Generator</a>
+                    <br />
+                    <br />
                     <input type="text" id="charName" onChange={(x) => {this.props.setName(x.target.value)}} className="form-control input-group-lg" placeholder="Character Name" aria-label="CharName" aria-describedby="basic-addon1"/>
                     <br/>
                     <DescriptionSelector idx="1" options={this.props.charData.careers[career1].descriptions} source={career1} setDescription={this.props.setDescription}/>
@@ -29,7 +33,8 @@ class PersonaStep extends Component {
             <div>
                 <h3 id="persona-header" name="persona-header">Step 6: Select persona descriptions</h3>
                 <p>Pick your name and descriptors from the selectors below.
-                     These description options come from your origin and careers.</p>
+                     These description options come from your origin and careers.
+                </p>
                 {personaContent}
             </div>
         );
@@ -44,7 +49,7 @@ class DescriptionSelector extends Component {
                 <select className="custom-select custom-select-lg" onChange={(x) => {
                     this.props.setDescription(x.target.value, idx);
                 }}>
-                    <option default>Select a descriptor</option>
+                    <option default value=''>Select a descriptor ({_u.capitalize(this.props.source)})</option>
                     {this.props.options.map((opt, idx) => {
                         return <option key={idx} value={opt}>{opt}</option>
                     })}

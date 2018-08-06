@@ -17,7 +17,9 @@ class AssetsStep extends Component {
                 <p>
                     This will involve designing your own items 
                     (including weapons, attire and armor, vehicles, cargo, crew and/or tool kits) 
-                    using base designs and tags (found starting on page 113 of <a href="https://drive.google.com/file/d/1agL2dGUN1oJJTgx5ySFXw6aP912XEPXS/view?usp=sharing">the Rulebook</a>). 
+                    using base designs and tags (found starting on page 113 of 
+                    <a href="https://drive.google.com/file/d/1agL2dGUN1oJJTgx5ySFXw6aP912XEPXS/view?usp=sharing">the Rulebook</a>). 
+                    This part is complex enough I think it's worth doing together in person. 
                 </p>
             </div>
         );

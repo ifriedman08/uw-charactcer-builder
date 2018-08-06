@@ -10,7 +10,7 @@ class StatSelector extends Component {
         return (
             <div>
                 <select className="custom-select custom-select-lg" onChange={setStatValue}>
-                    <option default>Select a stat value</option>
+                    <option default value="">Select a stat value</option>
                     <option value="+2">+2</option>
                     <option value="+1">+1</option>
                     <option value="+1">+1</option>

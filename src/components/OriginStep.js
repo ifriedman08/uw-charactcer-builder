@@ -102,7 +102,7 @@ class OriginAccordionPanel extends React.Component {
 
     render() {
         var skillsDescriptions = this.props.origins[this.props.origin].skillOptions.map((skill, idx) => {
-            return <SkillCard skill={skill} skills={this.props.skills} selectedSkills={this.props.selectedSkills} key={idx} isActiveOrigin={this.props.isActiveOrigin} toggleSkillState={this.props.toggleSkillState}/>;
+            return <SkillCard max={1} skill={skill} skills={this.props.skills} selectedSkills={this.props.selectedSkills} key={idx} isActiveOrigin={this.props.isActiveOrigin} toggleSkillState={this.props.toggleSkillState}/>;
         });
         return (
             <div id={`origin-collapse${this.props.idx}`} className="collapse" aria-labelledby={`heading${this.props.idx}`} data-parent="#origin-accordion">

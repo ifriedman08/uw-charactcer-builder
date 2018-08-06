@@ -5,6 +5,7 @@
   "homepage": "http://ifriedman08.github.io/uw-character-builder",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "pdffiller": "0.0.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-icons": "^2.2.7",
