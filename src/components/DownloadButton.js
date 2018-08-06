@@ -146,10 +146,15 @@ class DownloadButton extends Component {
                 [this.props.charState.careerSkills[2]]: this.props.charData.skills[this.props.charState.careerSkills[2]].description,
                 [this.props.charState.originSkill[0]]: this.props.charData.skills[this.props.charState.originSkill[0]].description
             })
-        }      
+            var footer = <a id="submit" href="#" style={{"borderRadius": "0"}} className={"btn btn-lg " + btnClass + " btn-block " + isDisabled }>{btnMessg}</a>
+        } else {
+            var footer = (<div style={{ "borderRadius": "0", "marginBottom": "0"}} className="alert alert-danger" role="alert">
+                            {this.errorMessageList[0]}
+                        </div>)
+        }     
         return (
             <div className="fixed-bottom">
-                <a id="submit" href="#" style={{"borderRadius": "0"}} className={"btn btn-lg " + btnClass + " btn-block " + isDisabled }>{btnMessg}</a>
+                {footer}
             </div>
         );
     }
