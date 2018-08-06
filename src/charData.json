@@ -17,7 +17,7 @@
     },
     "deduction": {
       "name": "deduction",
-      "description": "When you first witness a situation, you may ask one of the following questions, the GM will answer honestly.\nWho or what? \n• is most vulnerable in this situation? \n• is most dangerous in this situation? \n• caused this situation?",
+      "description": "When you first witness a situation, you may ask one of the following questions, the GM will answer honestly.\nWho or what? \n- is most vulnerable in this situation? \n- is most dangerous in this situation? \n- caused this situation?",
       "iconName": "search"
     },
     "technobabble": {
@@ -57,12 +57,12 @@
     },
     "marketing": {
       "name": "marketing",
-      "description": "When you arrive in a civilized area, choose a type of market. You can easily find that kind of market here.\n• Elite: High class, exacting.\n• Secretive: Discrete, illicit.\n• Motivated: Fast, agreeable.",
+      "description": "When you arrive in a civilized area, choose a type of market. You can easily find that kind of market here.\n- Elite: High class, exacting.\n- Secretive: Discrete, illicit.\n- Motivated: Fast, agreeable.",
       "iconName": "cash"
     },
     "acumen": {
       "name": "acumen",
-      "description": "When you first visit a market or environment, you may ask one of the following questions, and the GM will answer honestly:\n• What is profitably exploitable here?\n• What is in high demand here?\n• Who is the biggest economic player?",
+      "description": "When you first visit a market or environment, you may ask one of the following questions, and the GM will answer honestly:\n- What is profitably exploitable here?\n- What is in high demand here?\n- Who is the biggest economic player?",
       "iconName": "card"
     },
     "luxury": {
@@ -72,12 +72,12 @@
     },
     "bribe": {
       "name": "bribe",
-      "description": "You can use Acquisition to purchase the following: \n• Political power \n• Legal decisions \n• Faction involvement \n• Diplomatic immunity",
+      "description": "You can use Acquisition to purchase the following: \n- Political power \n- Legal decisions \n- Faction involvement \n- Diplomatic immunity",
       "iconName": "wallet"
     },
     "boldly go": {
       "name": "boldly go",
-      "description": "When leading an expedition into the unknown, Roll+Mettle. \nOn a 10+, choose 1. \nOn a 7-9, the GM will choose 1. \nYou encounter? \n• something potentially profitable \n• something currently useful \n• something uniquely awesome",
+      "description": "When leading an expedition into the unknown, Roll+Mettle. \nOn a 10+, choose 1. \nOn a 7-9, the GM will choose 1. \nYou encounter: \n- something potentially profitable \n- something currently useful \n- something uniquely awesome",
       "iconName": "rocket"
     },
     "reconnaissance": {
@@ -87,7 +87,7 @@
     },
     "survival": {
       "name": "survival",
-      "description": "You can scrounge up the following from all but the most barren, inhospitable surroundings:\n• Somewhat edible food and drink\n• Basic medicine or first-aid materials\n• Rustic Wilderness Kit\n• Primitive Class 0 melee weapon",
+      "description": "You can scrounge up the following from all but the most barren, inhospitable surroundings:\n- Somewhat edible food and drink\n- Basic medicine or first-aid materials\n- Rustic Wilderness Kit\n- Primitive Class 0 melee weapon",
       "iconName": "bonfire"
     },
     "recklessness": {
@@ -107,12 +107,12 @@
     },
     "construction": {
       "name": "construction",
-      "description": "A few hours of work creates a small structure with one of the following traits, or adds that trait to an existing room.\n• Shelter\n• Defensible\n• Concealed\n• Workspace",
+      "description": "A few hours of work creates a small structure with one of the following traits, or adds that trait to an existing room.\n- Shelter\n- Defensible\n- Concealed\n- Workspace",
       "iconName": "construct"
     },
     "tinker": {
       "name": "tinker",
-      "description": "You can assemble the following from scrap metal and spare parts:\n• Shoddy Class 0 melee weapon\n• Makeshift Class 0 explosive\n• Crude Engineering Kit",
+      "description": "You can assemble the following from scrap metal and spare parts:\n- Shoddy Class 0 melee weapon\n- Makeshift Class 0 explosive\n- Crude Engineering Kit",
       "iconName": "hammer"
     },
     "upgrade": {
@@ -122,7 +122,7 @@
     },
     "dismantle": {
       "name": "dismantle",
-      "description": "When forcefully dismantling, demolishing or breaking something, Roll+Physique.\nOn a 10+, choose 2.\nOn a 7-9, choose 1.\n• It doesn't take very long.\n• It doesn't attract too much attention.\n• You recover useful components.\n• You could rebuild or reassemble it.\n• You gain a Data Point about it.",
+      "description": "When forcefully dismantling, demolishing or breaking something, Roll+Physique.\nOn a 10+, choose 2.\nOn a 7-9, choose 1.\n- It doesn't take very long.\n- It doesn't attract too much attention.\n- You recover useful components.\n- You could rebuild or reassemble it.\n- You gain a Data Point about it.",
       "iconName": "cog"
     },
     "tactics": {
@@ -152,7 +152,7 @@
     },
     "fame": {
       "name": "fame",
-      "description": "Decide what you are famous/infamous for. Factions, groups and people of importance always know who you are when you meet them. Allies may use your +Influence if they speak in your name, but you?ll suffer for any faux-pas.",
+      "description": "Decide what you are famous/infamous for. Factions, groups and people of importance always know who you are when you meet them. Allies may use your +Influence if they speak in your name, but you'll suffer for any faux-pas.",
       "iconName": "star"
     },
     "leadership": {
@@ -167,7 +167,7 @@
     },
     "inspiration": {
       "name": "inspiration",
-      "description": "Choose an emotion and the medium/ art with which you convey it, then Roll+Influence or +Physique.\nOn a 7-9, the emotion takes hold of your audience.\nOn a 10+, as above, and choose 1:\n• You gain a keen admirer.\n• You are treated lavishly.\n• You can Command the audience.",
+      "description": "Choose an emotion and the medium/ art with which you convey it, then Roll+Influence or +Physique.\nOn a 7-9, the emotion takes hold of your audience.\nOn a 10+, as above, and choose 1:\n- You gain a keen admirer.\n- You are treated lavishly.\n- You can Command the audience.",
       "iconName": "bulb"
     },
     "diplomacy": {
@@ -182,12 +182,12 @@
     },
     "sneak attack": {
       "name": "sneak attack",
-      "description": "When you get the drop on someone, Roll+Mettle.\nOn a 10+, choose 1.\nOn a 7-9, the GM will give you 2 of the following options, choose 1 of them.\n• Kill them\n• Injure them\n• Rob/disarm them\n• Capture/disable them",
+      "description": "When you get the drop on someone, Roll+Mettle.\nOn a 10+, choose 1.\nOn a 7-9, the GM will give you 2 of the following options, choose 1 of them.\n- Kill them\n- Injure them\n- Rob/disarm them\n- Capture/disable them",
       "iconName": "flash"
     },
     "scapegoat": {
       "name": "scapegoat",
-      "description": "When you would suffer social, legal or financial consequences, name someone and Roll+Expertise.\nOn a 10+, they suffer instead.\nOn a 7-9, as above. They know it was you. On a 6-, it didn?t work, and they know what you tried to do.",
+      "description": "When you would suffer social, legal or financial consequences, name someone and Roll+Expertise.\nOn a 10+, they suffer instead.\nOn a 7-9, as above. They know it was you. On a 6-, it didn't work, and they know what you tried to do.",
       "iconName": "walk"
     },
     "false identity": {
@@ -212,7 +212,7 @@
     },
     "navigation": {
       "name": "navigation",
-      "description": "When you plan a long voyage, choose 1. The voyage will be:\n• Fast: You know a shortcut.\n• Safe: Choose a faction to avoid.\n• Pleasant: +2 to Cramped Quarters.\n• Profitable: If you deliver the passengers who are asking for passage.",
+      "description": "When you plan a long voyage, choose 1. The voyage will be:\n- Fast: You know a shortcut.\n- Safe: Choose a faction to avoid.\n- Pleasant: +2 to Cramped Quarters.\n- Profitable: If you deliver the passengers who are asking for passage.",
       "iconName": "compass"
     },
     "calibrations": {
@@ -227,7 +227,7 @@
     },
     "upload": {
       "name": "upload",
-      "description": "Expend a Data Point on the SectorNet to have the facts about the subject?\n• be erased, hidden, classified.\n• become common knowledge.\n• be falsified, pivotally altered.",
+      "description": "Expend a Data Point on the SectorNet to have the facts about the subject:\n- be erased, hidden, classified.\n- become common knowledge.\n- be falsified, pivotally altered.",
       "iconName": "cloud-upload"
     },
     "hijack": {
@@ -292,12 +292,12 @@
     },
     "discipline": {
       "name": "discipline",
-      "description": "You know the rules, the codes, the processes, the scripture, the laws. They give you stability. You don?t deal well with change. You gain +1 to your Mettle stat, to a maximum of +2.",
+      "description": "You know the rules, the codes, the processes, the scripture, the laws. They give you stability. You don't deal well with change. You gain +1 to your Mettle stat, to a maximum of +2.",
       "iconName": "qr-scanner"
     },
     "hard labor": {
       "name": "hard labor",
-      "description": "You can perform long grueling hours of physical labor with minimal rest. You?ve collected a wide variety of aches, pains and minor ailments from doing this. You gain +1 to your Physique stat, to a maximum of +2.",
+      "description": "You can perform long grueling hours of physical labor with minimal rest. You've collected a wide variety of aches, pains and minor ailments from doing this. You gain +1 to your Physique stat, to a maximum of +2.",
       "iconName": "hammer"
     }
   },
