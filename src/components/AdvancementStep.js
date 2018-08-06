@@ -15,13 +15,13 @@ class AdvancementStep extends Component {
             var advancementList = [];
             selectedCareers.forEach(c => {
                 charData.careers[c.toLowerCase()].advancementOptions.forEach(adv => {
-                    advancementList.push(`${_u.capitalize(c)}: ${adv}`);
+                    advancementList.push(`${adv} (${_u.capitalize(c)})`);
                 })
             });
 
             // charData.careers[selectedCareers[1].toLowerCase()].advancementOptions
             advContent = (
-                <div>
+                <form>
                     <p>
                         Here is how levelling-up works in this game:<br /> You pick an advancement. When your advancement trigger happens in the game, you mark 1 experience. When you have accumulated a number of experience points <strong>equal to your current number of skills</strong>, you do the following:
                     </p>
@@ -34,13 +34,18 @@ class AdvancementStep extends Component {
                     <p>
                         So make sure to pick an Advancement from a career that has a specific skill you want to pick up next.
                     </p>
-                    <select className="custom-select custom-select-lg mb-3" onChange={(x) => { this.props.setAdvancement(x.target.value) }}>
-                        <option defaultValue value="">Select your advancement trigger</option>
-                        {advancementList.map((adv, idx) => {
-                            return <option key={idx} value={adv}>{adv}</option>
-                        })}
-                    </select>
-                </div>
+                    <p>
+                        Each session, I want all characters to mark experience the first time:
+                    </p>
+                    {advancementList.map((adv, idx) => {
+                        return (<div className="custom-control-adv custom-radio" key={idx}>
+                            <input type="radio" id={"customRadio" + idx} value={adv} name="customRadio" className="custom-control-adv-input form-control-lg" onClick={(x) => { this.props.setAdvancement(x.target.value) }}/>
+                            <label style={{"display": "contents"}} className="custom-control-adv-label" htmlFor={"customRadio" + idx}>  {adv}</label>
+                            <br />
+                            <br />
+                        </div>)
+                    })}
+                </form>
             )
         }
         return (
