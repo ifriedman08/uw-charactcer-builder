@@ -35,7 +35,7 @@
       $(document).ready(function(){
         $('#career-accordion').on('shown.bs.collapse', function (e) {
           console.log('-------------- ', e);
-          e.target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+          e.target.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
         });
       })
       

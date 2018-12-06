@@ -6,10 +6,10 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "pdffiller": "0.0.10",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-icons": "^2.2.7",
-    "react-scripts": "1.1.4"
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

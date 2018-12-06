@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UW - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <link rel=" stylesheet" type="text/css" href="css/tinytools.toggleswitch.min.css"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Jura:500,700" rel="stylesheet">
+
+    <script src="tinytools.toggleswitch.min.js"></script>
+    
+    <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+    <style>
+    * {
+        font-family: "Jura";
+        font-weight: "700"
+    }
+
+    .list-group ion-icon {
+        vertical-align: text-top 
+    }
+
+    div#bars div.progress {
+        height: 5em;
+    }
+
+    /* div#bars {
+        transform: translateY(85%);
+    } */
+    .switch {
+    font-size: 1rem;
+    position: relative;
+    }
+    .switch input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    background: none;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    padding: 0;
+    }
+    .switch input + label {
+    position: relative;
+    min-width: calc(calc(2.375rem * .8) * 2);
+    border-radius: calc(2.375rem * .8);
+    height: calc(2.375rem * .8);
+    line-height: calc(2.375rem * .8);
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    vertical-align: middle;
+    text-indent: calc(calc(calc(2.375rem * .8) * 2) + .5rem);
+    }
+    .switch input + label::before,
+    .switch input + label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(calc(2.375rem * .8) * 2);
+    bottom: 0;
+    display: block;
+    }
+    .switch input + label::before {
+    right: 0;
+    background-color: #dee2e6;
+    border-radius: calc(2.375rem * .8);
+    transition: 0.2s all;
+    }
+    .switch input + label::after {
+    top: 2px;
+    left: 2px;
+    width: calc(calc(2.375rem * .8) - calc(2px * 2));
+    height: calc(calc(2.375rem * .8) - calc(2px * 2));
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.2s all;
+    }
+    .switch input:checked + label::before {
+    background-color: #08d;
+    }
+    .switch input:checked + label::after {
+    margin-left: calc(2.375rem * .8);
+    }
+    .switch input:focus + label::before {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 136, 221, 0.25);
+    }
+    .switch input:disabled + label {
+    color: #868e96;
+    cursor: not-allowed;
+    }
+    .switch input:disabled + label::before {
+    background-color: #e9ecef;
+    }
+    .switch.switch-sm {
+    font-size: 0.875rem;
+    }
+    .switch.switch-sm input + label {
+    min-width: calc(calc(1.9375rem * .8) * 2);
+    height: calc(1.9375rem * .8);
+    line-height: calc(1.9375rem * .8);
+    text-indent: calc(calc(calc(1.9375rem * .8) * 2) + .5rem);
+    }
+    .switch.switch-sm input + label::before {
+    width: calc(calc(1.9375rem * .8) * 2);
+    }
+    .switch.switch-sm input + label::after {
+    width: calc(calc(1.9375rem * .8) - calc(2px * 2));
+    height: calc(calc(1.9375rem * .8) - calc(2px * 2));
+    }
+    .switch.switch-sm input:checked + label::after {
+    margin-left: calc(1.9375rem * .8);
+    }
+    .switch.switch-lg {
+    font-size: 1.25rem;
+    }
+    .switch.switch-lg input + label {
+    min-width: calc(calc(3rem * .8) * 2);
+    height: calc(3rem * .8);
+    line-height: calc(3rem * .8);
+    text-indent: calc(calc(calc(3rem * .8) * 2) + .5rem);
+    }
+    .switch.switch-lg input + label::before {
+    width: calc(calc(3rem * .8) * 2);
+    }
+    .switch.switch-lg input + label::after {
+    width: calc(calc(3rem * .8) - calc(2px * 2));
+    height: calc(calc(3rem * .8) - calc(2px * 2));
+    }
+    .switch.switch-lg input:checked + label::after {
+    margin-left: calc(3rem * .8);
+    }
+    .switch + .switch {
+    margin-left: 1rem;
+    }
+
+    body {
+    padding: 1rem;
+    }
+
+    .dropdown-menu {
+    margin-top: .75rem;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="sections" class="col-lg-3 d-inline-block float-left">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="medal"></ion-icon> Helm
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="construct"></ion-icon> Engineering
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="beaker"></ion-icon> Lab
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="compass"></ion-icon> Navigation
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="wifi"></ion-icon> Communication
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="home"></ion-icon> Residents
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="cube"></ion-icon> Cargo Bay
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="jet"></ion-icon> Motor Bay
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="fitness"></ion-icon> Barracks
+                </li>
+                <li class="list-group-item list-group-item-success">
+                    <ion-icon name="beer"></ion-icon> Mess Hall
+                </li>
+            </ul>
+        </div>
+        <div id="bars" class="col-lg-6 d-inline-block float-left">
+            O<sub>2</sub><div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br/>
+            Fuel<div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <br/>
+            Shields<div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div id="toggles" class="col-lg-6 d-inline-block float-left">
+            <div class="form-group">
+                <br />
+                <span class="switch switch-lg">
+                    <input type="checkbox" class="switch" id="switch-lg">
+                    <label for="switch-lg">Grav</label>
+                </span>
+            </div>
+        </div>
+        <div id="console">
+
+        </div>
+    </div>
+    <script>
+
+        var sectionStatusList = [
+            "list-group-item-success",
+            "list-group-item-warning",
+            "list-group-item-danger",
+            "list-group-item-dark",
+            "list-group-item-info"
+        ];
+
+        var progressBarStatusList = [
+            "bg-info",
+            "bg-warning",
+            "bg-warning"
+        ];
+
+        $('body').on('click', 'div#sections li.list-group-item', function (e) {
+            e.preventDefault();
+            var oldClass = e.target.classList[1];
+            $(e.target).toggleClass(oldClass);
+            var i = sectionStatusList.indexOf(oldClass);
+            var newClass = i === sectionStatusList.length - 1 ? sectionStatusList[0] : sectionStatusList[i + 1];
+            $(e.target).toggleClass(newClass);
+        });
+        
+        $('body').on('click', 'div#bars div.progress', function (e) {
+            e.preventDefault();
+            if (e.target.classList[0] === 'progress-bar') {
+                var rect = e.target.parentElement.getBoundingClientRect();
+                var range = rect.width;
+                var newVal = e.pageX - rect.x;
+                newPercentage = Math.ceil((newVal / range) * 100);
+                e.target.style.width = newPercentage + "%";
+            } else if (e.target.classList[0] === 'progress') {
+                var rect = e.target.getBoundingClientRect();
+                var range = rect.width;
+                var newVal = e.pageX - rect.x;
+                newPercentage = Math.ceil((newVal / range) * 100);
+                $(e.target).find('.progress-bar')[0].style.width = newPercentage + "%";
+            }
+        });
+
+    </script>
+</body>
+</html>
