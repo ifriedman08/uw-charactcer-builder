@@ -9,7 +9,12 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-icons": "^2.2.7",
+<<<<<<< HEAD
     "react-scripts": "^2.1.1"
+=======
+    "react-scripts": "1.1.4",
+    "merge": ">=1.2.1"
+>>>>>>> dfb09495591f71390f5db59886933b22b4f673e2
   },
   "scripts": {
     "start": "react-scripts start",
